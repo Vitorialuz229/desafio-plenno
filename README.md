@@ -87,7 +87,7 @@ amount numeric
 date date
 created_at timestamp
 ```
-## 🔄 Fluxos do Sistema
+## Fluxos do Sistema
 
 ### Cadastro de membro
 - Usuário cadastra um novo membro  
