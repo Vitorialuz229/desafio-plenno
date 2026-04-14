@@ -21,7 +21,7 @@ import {
   TableHeader,
   TableRow
 } from '@/components/ui/table'
-
+import { useRouter } from 'next/navigation'
 import { formatPhone } from '@/lib/utils/format'
 
 type Props = {
@@ -33,6 +33,8 @@ export default function MemberTable({ members }: Props) {
 
   const [localMembers, setLocalMembers] = useState<Member[]>([])
   const [page, setPage] = useState(1)
+
+  const router = useRouter()
 
   const pageSize = 5
 
@@ -81,6 +83,7 @@ export default function MemberTable({ members }: Props) {
             <TableHead>Telefone</TableHead>
             <TableHead>Data</TableHead>
             <TableHead>Status</TableHead>
+            <TableHead>Ações</TableHead>
           </TableRow>
         </TableHeader>
 
@@ -118,6 +121,15 @@ export default function MemberTable({ members }: Props) {
                       {member.status ? 'Ativo' : 'Inativo'}
                     </span>
                   </div>
+                </TableCell>
+
+                <TableCell>
+                  <button
+                    onClick={() => router.push(`/members/${member.id}/tithes`)}
+                    className="text-sm px-3 py-1 rounded-md border border-border/50 hover:bg-muted transition"
+                  >
+                    Dízimos
+                  </button>
                 </TableCell>
               </TableRow>
             ))
