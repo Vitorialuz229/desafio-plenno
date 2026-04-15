@@ -3,6 +3,11 @@
 Sistema web para gestão de membros e controle de dízimos, desenvolvido como desafio técnico.  
 O objetivo é centralizar informações de membros e registrar contribuições financeiras de forma simples, rápida e organizada.
 
+
+## Link de acesso do sistema em produção 
+
+https://desafio-plenno-wu3f.vercel.app/members
+
 ---
 
 ## Telas do Sistema
